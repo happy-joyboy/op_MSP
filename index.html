@@ -33,7 +33,11 @@
         var delayInMilliseconds = 4000; //
 
 setTimeout(function() {
-    window.location.href ="/op_MSP/sites/hq.html";
+  // Get the repository name dynamically
+var repoName = window.location.pathname.split('/')[1]; // Extract repo name from the URL
+
+// Construct the new path
+window.location.href = `/${repoName}/sites/hq.html`;
 }, delayInMilliseconds);
     </script>
 </body>
