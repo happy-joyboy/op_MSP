@@ -3,10 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/cyberpunk.css">
+    <style>
+        .flex{
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        @media(max-width: 500px) {
+
+            #logo{
+                width: min-content;
+            }
+            .cyber-tile{
+                font-size: 1.2rem;
+            }
+        
+            .cyber-tile-big{
+                width: 90vw;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
     <title>Document</title>
 </head>
 <body>
-    not ready
+    <header>
+        <div class="bg-black fg-white cyber-razor-bottom pt-0 pl-8 pb-4 ">
+            <span class="cyberpunk-font-og glitch fg-red flex">
+                <span class="c glitch" style="font-size: 5rem;">MSP</span>
+                <img src="../assets/Picture1.jpg" alt="" id="logo">
+                <div class="flex">
+                    <span class="c fg-red" style="font-size: 5rem;">c</span><span class="c fg-red">yber Committee</span>
+                </div>
+            </span>
+            </div>
+    </header>
+    <main>
+        <div class="content flex">
+            <h2 class="cyber-h Blender-font fg-black" style="padding-left: 2rem ;">what is msp?</h2>
+            <div class="cyber-tile-big bg-purple fg-white">
+                <p style="padding-left: 5px;">
+                    we believe in empowering students with the skills, knowledge, and network to thrive in the rapidly evolving world of technology. Whether you're interested in software development, cloud computing, or innovation, we provide the resources and community to help you succeed.
+                </p>
+            </div>
+            <br>
+            <h2 class="cyber-h Blender-font fg-black" style="padding-left: 2rem ;">who are we?</h2>
+            <div class="flex">
+                <div class="cyber-tile-big bg-red">
+                    <img src="/assets/top-hear-hey-computer-person-right.png" alt="" id="meme" >
+                </div>
+                <div class="cyber-tile bg-blue fg-white" style="margin: auto 2rem;text-indent: 2rem;">
+                    <p>  yes we are the pc guyes... .Here we try to blend offensive and defensive strategies, teaching you to think like an attacker while building impenetrable defenses. From penetration testing to incident response, you'll get familiar with  tools and techniques that keep our connected world secure. Join us to become the guardian at the crossroads of innovation and security .</p>
+                </div>
+            </div>
+            
+        </div>
+        
+    </main>
 </body>
 </html>
