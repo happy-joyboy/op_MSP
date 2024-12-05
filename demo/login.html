@@ -48,9 +48,9 @@
         <h3 class="typing-text">We are <span></span></h3>
         
         <!-- Display error message if login fails -->
-        <?php if (isset($error_message)): ?>
+        <!-- <?php if (isset($error_message)): ?>
             <p style="color: red;"><?php echo $error_message; ?></p>
-        <?php endif; ?>
+        <?php endif; ?> -->
         
         <!-- Login form -->
         <form action="#" method="post">
@@ -58,7 +58,7 @@
                 <input type="text" name="username" placeholder="Username" required>
                 <input type="password" name="password" placeholder="Password" required>
             </div>
-            <input type="submit" name="login" value="Login" class="btn"> 
+            <input type="submit" name="login" value="Login" class="btn" onclick=""> 
         </form>
     </div>
 </body>
