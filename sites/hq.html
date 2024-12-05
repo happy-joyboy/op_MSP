@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+  <main >
+    <div id="border">
+      <wrapper>
+        <scroller id="scroller">
+          
+        <div class="texttype" id="b" style="display:none;">
+          <p class="message-box" id="typing"></p>
+        </div>
+        <span class="cyberpunk-font-og glitch" id="logo">
+          <p>
+              <span class="c glitch" style="font-size: 7rem;">MSP</span><br>
+              <span class="c" style="font-size: 5rem;">c</span>yber Committee
+          </p>
+      </span>
+      
+      <!-- style="display:none;" -->
+          <content id="main" >
+            <div id="buttons" style="text-align: center;">
+              <button id="Home"><a href="https://msp-2024-2025.vercel.app/index.html">Home</a></button>
+              <button id="terminal"><a href="../labs/login.php">Login</a></button>
+              <button id="explore"><a href="../sites/about.html">About</a></button>
+            </div>
+          </content>
+        </scroller>
+      </wrapper>
+      <!-- <scrollbar></scrollbar> -->
+    </div>
+  </main>
+  <button> Generate </button>
+<script>
+  function punkyPolygons() {
+  const collection = new Set()
+  
+  for (let i = 0; i <= 25; i++)
+    collection.add(`${rando()}% ${rando()}%`)
+  
+  return Array.from(collection.values()).join(',')
+}
+
+function rando() {
+  return (Math.random() * 100).toFixed()
+}
+
+var style = document.createElement('style');
+style.type = 'text/css';
+
+var keyFrames = `\
+  @keyframes glitch {\
+    13% {\
+      clip-path: polygon(DYNAMIC_VALUE_1);\
+    }\
+    
+    53% {\
+      clip-path: polygon(DYNAMIC_VALUE_2);\
+    }\
+
+    37% {\
+      clip-path: polygon(DYNAMIC_VALUE_3);\
+    }\
+ 
+    62% {\
+      clip-path: polygon(DYNAMIC_VALUE_4);\
+    }\
+    
+    78% {\
+      clip-path: polygon(DYNAMIC_VALUE_5);\
+    }
+    
+    14%, 39%, 56%, 64%, 79%{\
+      clip-path: none;\
+    }\
+  }`
+
+function generateNewPolygons() {
+
+  let kf = keyFrames;
+  
+  for (let i =1; i<=5; i++) {
+    kf = kf.replace('DYNAMIC_VALUE_'+i, punkyPolygons());
+  }
+  
+  style.innerHTML = kf;
+
+  document.getElementsByTagName('head')[0].appendChild(style);
+  document.querySelector('button').onclick = generateNewPolygons;
+}
+</script>
+<!-- <script>
+ var i = 0;
+var x = 0;
+var speed = 50;
+var speed2 = 200;
+const topsecret = [
+  'S : Welcome Back N....\n',
+  'S : Hope you got better ',
+  'T : You still worry too much',
+  'S : Right...Your mission if you choose to accept is waiting',
+  'T : Wakatta',
+  'S : Giving you access now ',
+  'S : And T ... take care',
+  'T : ...',
+  'S : Sorry',
+  '################################'
+];
+
+function typing() {
+  if (i < topsecret[x].length) {
+    document.getElementById("typing").innerHTML += topsecret[x].charAt(i);
+    i++;
+    setTimeout(typing, speed);
+  } else {
+    document.getElementById("typing").innerHTML += '<br>';
+    x++;
+    i = 0;
+    if (x < topsecret.length) {
+      setTimeout(typing, speed2);
+    }else{
+      document.getElementById("main").style.display = "block";
+      document.getElementById("b").style.display = "none";
+    }
+  }
+}
+
+window.onload = function() {
+  typing();
+};
+</script> -->
+
+</body>
+</html>

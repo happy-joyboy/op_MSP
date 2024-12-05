@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../styles/styles22.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contact" id="contact">
+        <h2 class="heading">xss1</span></h2>
+        <form action="#" method="get">
+
+            <div class="input-box">
+                <input type="text" name="name" placeholder="any thing" required>
+                <input type="email" name="email" placeholder="Email" hidden>
+                <input type="text" name="phone" placeholder="Phone Number" hidden >
+            </div>
+            <input type="submit" value="Send Message" class="btn"> 
+        </form>
+
+        <!-- Reflect the user input back onto the page -->
+        <div class="reflection">
+            <h3>Your Submitted Information:</h3>
+            <p>Name: <span id="user-name"></span></p>
+            <p>Email: <span id="user-email"></span></p>
+            <p>Phone: <span id="user-phone"></span></p>
+        </div>
+
+        <script>
+            // Simulate reflecting GET parameters on the page (this simulates how user input is reflected in a response)
+            const urlParams = new URLSearchParams(window.location.search);
+
+            // Example of unsafe reflection without sanitization
+            document.getElementById("user-name").innerHTML = urlParams.get("name") || "N/A";
+            document.getElementById("user-email").innerHTML = urlParams.get("email") || "N/A";
+            document.getElementById("user-phone").innerHTML = urlParams.get("phone") || "N/A";
+
+        </script>
+    </div>
+    <div class="next">
+        <a href="xss2.php" class="btn"> Next Challenge</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,505 @@
+@import url("https://fonts.googleapis.com/css2?family=Tomorrow&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Bungee+Hairline|Libre+Barcode+39+Text|Orbitron|Raleway+Dots|Roboto");
+
+@font-face 
+{
+    font-family: Cyberpunk;
+    src: url(fonts/Cyberpunk.otf) format('opentype');
+}
+
+:root 
+{
+    --root-font-size: 18px;
+
+    --yellow: #f8ef02;
+    --cyan: #00ffd2;
+    --red: #ff003c;
+    --blue: #136377;
+    --green: #446d44;
+    --purple: purple;
+    --black: #000;
+    --white: #fff;
+    --dark: #333;
+
+    --fg: var(--black);
+    --bg: transparent;
+    --ac: var(--black);
+
+    --yellow-cyberpunk-font: #feef00;
+    --cyan-cyberpunk-font1:#46dffb;
+    --cyan-cyberpunk-font2:#45aefb;
+
+
+}
+
+.cyberpunk-font,
+.cyberpunk-font *,
+.cyberpunk-font-og,
+.cyberpunk-font-og *
+{
+    font-family: Cyberpunk !important;
+    text-transform: uppercase !important;
+    letter-spacing: -.25em;
+}
+
+.cyberpunk-font-og,
+.cyberpunk-font-og *
+{
+    text-shadow: var(--cyan-cyberpunk-font1) 1px 1px, var(--cyan-cyberpunk-font2) 2px 2px;
+    color: var(--yellow-cyberpunk-font);
+}
+
+.cyberpunk-font .c,
+.cyberpunk-font-og .c
+{
+    font-style: normal;
+    font-size: 2em;
+    position: relative;
+    top: -.2em;
+}
+
+.cyberpunk-font .p,
+.cyberpunk-font-og .p
+{
+    font-style: normal;
+    font-size: 2em;
+    letter-spacing: -.45em;
+    position: relative;
+    bottom: -.25em;
+    left: -.15em;
+}
+
+.glitch {
+  animation: glitch 5s step-end infinite alternate, glitch-skew 5s step-end infinite alternate;
+}
+
+@keyframes glitch {
+13% { 
+  clip-path:polygon(90% 55%,20% 97%,85% 42%,20% 62%,6% 55%,76% 74%,68% 67%,49% 32%,47% 41%,2% 16%,95% 73%,68% 14%,35% 81%,31% 57%,29% 24%,57% 63%,52% 91%,45% 82%,6% 81%,82% 88%,30% 61%,70% 18%,15% 36%,16% 67%,74% 84%,21% 81%);
+}
+
+53% { 
+  clip-path: polygon(46% 96%,51% 63%,92% 0%,47% 85%,26% 37%,15% 6%,16% 15%,64% 28%,69% 88%,50% 49%,29% 17%,91% 74%,54% 36%,85% 94%,89% 92%,96% 22%,47% 75%,51% 12%,12% 37%,1% 41%,63% 33%,90% 52%,48% 18%,5% 56%,77% 80%,60% 48%);
+}
+
+37% {
+  clip-path: polygon(73% 96%,32% 94%,26% 33%,40% 16%,69% 28%,72% 42%,32% 33%,22% 3%,55% 64%,79% 57%,57% 39%,0% 44%,27% 36%,17% 32%,47% 35%,53% 10%,65% 96%,72% 51%,15% 56%,61% 21%,66% 29%,33% 7%,8% 86%,47% 89%,43% 56%,98% 7%);
+}
+
+62% {
+  clip-path: polygon(44% 98%,91% 91%,90% 18%,72% 50%,63% 5%,36% 64%,23% 8%,43% 19%,88% 86%,7% 22%,37% 99%,71% 21%,76% 50%,100% 73%,5% 41%,65% 26%,19% 55%,36% 5%,11% 83%,28% 48%,36% 36%,9% 64%,64% 22%,66% 38%,80% 68%,69% 76%);
+}
+
+78%{
+  clip-path: polygon(24% 46%,40% 79%,28% 54%,98% 82%,87% 67%,36% 71%,37% 29%,89% 26%,89% 21%,8% 8%,61% 35%,4% 23%,90% 77%,46% 98%,82% 6%,76% 94%,17% 52%,59% 22%,76% 92%,39% 44%,74% 97%,16% 6%,89% 84%,80% 52%,85% 55%,7% 91%);
+}
+
+14%, 39%, 56%, 64%, 79% { 
+  clip-path: none;
+}
+}
+
+@keyframes glitch-skew {
+13% { 
+  transform: skew(10deg, 10deg) scale(.6);
+}
+
+53% { 
+  transform: skew(20deg, 50deg) scale(.6);
+}
+
+37% {
+  transform: skew(-83deg, 17deg) scale(0.6);
+}
+
+78%{
+  transform: skew(289deg, 18deg) scale(0.6);
+}
+
+14%, 39%, 56%, 64%, 79% { 
+  transform: none;
+}
+}
+
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  color: white;
+}
+body {
+  background: linear-gradient(#333, #333),
+    repeating-linear-gradient(
+      -45deg,
+      transparent 4px,
+      transparent 0,
+      transparent 9px
+    ),
+    linear-gradient(rgba(0, 0, 0, 0.5) 1px, rgba(255, 200, 0, 0.1) 2px),
+    linear-gradient(to right, transparent 9px, #004),
+    linear-gradient(#001 9px, #004);
+  background-size: 8px 100%, 296px 7px, 100% 2px, 10px 10px, 10px 10px;
+  background-position: 0, 99.5%, 0 0, 0 0, 0 0;
+  background-repeat: repeat-y, no-repeat, repeat, repeat, repeat;
+  clip-path: polygon(
+    0 0,
+    100% 0px,
+    100% calc(100% - 30px),
+    calc(100% - 30px) 100%,
+    0 100%,
+    0 50%,
+    10px calc(25% + 10px),
+    0 25%
+  );
+  width: 100%;
+    height: 100vh;
+  overflow: hidden;
+}
+
+/* MEEEE */
+
+/* ENDDD */
+
+
+/* -- Fonts --*/
+
+/* -- Used for Main Titles --*/
+.bungee {
+  font-family: "Bungee Hairline", cursive;
+}
+
+/* -- Used for Corpo --*/
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+}
+
+/* -- Another font for Corpo --*/
+.raleway {
+  font-family: "Raleway Dots", cursive;
+}
+
+/* -- Industries --*/
+.barcode span {
+  font-family: "Libre Barcode 39 Text", cursive;
+}
+
+/* -- Used for Texts --*/
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: auto;
+  margin: 20px;
+  z-index: 1;
+}
+#border {
+  background: #d10047;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: calc(100% - 36px);
+  clip-path: polygon(
+    0 0,
+    100% 0px,
+    100% calc(100% - 30px),
+    calc(100% - 30px) 100%,
+    0 100%,
+    0 50%,
+    10px calc(50% - 10px),
+    10px calc(25% + 10px),
+    0 25%
+  );
+}
+wrapper {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 4px);
+  background: linear-gradient(#333, #333),
+    repeating-linear-gradient(
+      -45deg,
+      transparent 4px,
+      #530 0,
+      #530 6px,
+      transparent 0,
+      transparent 9px
+    ),
+    linear-gradient(rgba(0, 0, 0, 0.5) 1px, rgba(255, 200, 0, 0.1) 2px),
+    linear-gradient(to right, transparent 9px, #004),
+    linear-gradient(#001 9px, #004);
+  background-size: 8px 100%, 296px 7px, 100% 2px, 10px 10px, 10px 10px;
+  background-position: calc(100% - 7px) 0, 99.5% calc(100% - 3px), 0 0, 0 0, 0 0;
+  background-repeat: repeat-y, no-repeat, repeat, repeat, repeat;
+  clip-path: polygon(
+    0 0,
+    100% 0px,
+    100% calc(100% - 30px),
+    calc(100% - 30px) 100%,
+    0 100%,
+    0 50%,
+    10px calc(50% - 10px),
+    10px calc(25% + 10px),
+    0 25%
+  );
+  overflow: hidden;
+}
+scroller {
+  position: absolute;
+  top: 0;
+  bottom: 15px;
+  width: calc(100% - 28px);
+  padding-right: 35px;
+  overflow: hidden;
+  color: #d10047;
+}
+content {
+  position: relative;
+  box-sizing: initial;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 25px;
+  overflow-y: scroll;
+  word-wrap: break-word;
+}
+scrollbar {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  width: 10px;
+  height: 50px;
+  background: #d10047;
+  z-index: 2;
+}
+scrollbar:hover {
+  background: #d10047;
+}
+scrollbar:hover:after {
+  border-top: 10px solid #d10047;
+}
+scrollbar::after {
+  display: block;
+  position: absolute;
+  content: " ";
+  top: 100%;
+  left: 0;
+  border-top: 10px solid #d10047;
+  border-right: 10px solid transparent;
+  z-index: 2;
+}
+.logo {
+  resize: horizontal;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.buttons,
+button {
+  font-family: "Orbitron", sans-serif;
+}
+
+.message-box {
+  background: rgba(1, 1, 15, 0.411);
+  width: 70%;
+  height: 700px;
+  box-shadow: inset 0 2px 1px;
+  margin: auto;
+  margin-top: 40px;
+  padding: 20px;
+  position: relative;
+  box-sizing: initial;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 25px;
+  overflow-y: scroll;
+  word-wrap: break-word;
+}
+
+.message-box p {
+  white-space: pre;
+  font-family: "Orbitron", sans-serif;
+  color: #d10047;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  border: 1px solid #d10047;
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d10047;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f5417d;
+}
+
+.message-menu {
+  width: 40%;
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  border-right: 1px #00ffff;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.message-menu li {
+  float: left;
+  margin: 1px;
+  padding: 0.5em 1em;
+  text-align: center;
+}
+
+.message-menu li a {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  padding: 0 3em;
+  color: #00ffff;
+}
+
+.message-main {
+  width: 100%;
+  color: white;
+  margin-left: 1;
+  margin-top: 2em;
+}
+
+/* --- BUTTON --- */
+button {
+  margin: 40px;
+}
+button,
+button::after {
+  width: 320px;
+  height: 80px;
+  font-size: 27px;
+  background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
+  border: 0;
+  color: #00ffff;
+  letter-spacing: 2px;
+  line-height: 88px;
+  box-shadow: 6px 0 0 #00e6f6;
+  position: relative;
+}
+
+button::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  content: "CYBERPUNK 2077";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 3%,
+    #00e6f6 3%,
+    #00e6f6 5%,
+    #ff013c 3%
+  );
+  text-shadow: -3px -3px 0 #f8f005, 3px 3px 0 #00e6f6;
+  clip-path: var(--slice-0);
+}
+button:hover::after {
+  animation: glitch 1s;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+#logo{
+  font-size: 40px;
+  text-align: center;
+}
+
