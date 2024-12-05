@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 body{
     background-image: url(stacked-waves-haikei.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+=======
+body{
+    background-image: url(stacked-waves-haikei.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+>>>>>>> 9d9430c (Initial)
 }

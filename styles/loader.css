@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
@@ -153,3 +154,160 @@ body{
 
 /* typing */
 
+=======
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+@property --num {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+@keyframes initText{
+  0% {content:"Initializing system . . ." }
+  17% {content:"Initializing system . . . \00000a Loading core modules . . ." }
+  27% {content:"Initializing system . . . \00000a Loading core modules . . . \00000a Verifying user permissions . . . " }
+  36% {content:"Initializing system . . . \00000a Loading core modules . . . \00000a Verifying user permissions . . . \00000a Compiling source code . . . " }
+  42% {content:"Initializing system . . . \00000a Loading core modules . . . \00000a Verifying user permissions . . . \00000a Compiling source code . . . \00000a Running diagnostics . . ." }
+  49% {content:"Loading core modules . . . \00000a Verifying user permissions . . . \00000a Compiling source code . . . \00000a Running diagnostics . . . \00000a Establishing secure connection . . ." }
+  60% {content:"Verifying user permissions . . . \00000a Compiling source code . . . \00000a Running diagnostics . . . \00000a Establishing secure connection . . . \00000a Scanning for vulnerabilities . . ." }
+  66% {content:"Compiling source code . . . \00000a Running diagnostics . . . \00000a Establishing secure connection . . . \00000a Scanning for vulnerabilities . . . \00000a Loading user interface . . . \00000a" }
+  78% {content:"Running diagnostics . . . \00000a Establishing secure connection . . . \00000a Scanning for vulnerabilities . . . \00000a Loading user interface . . . \00000a Executing startup procedures . . . \00000a" }
+  100% {content:"Establishing secure connection . . . \00000a Scanning for vulnerabilities . . . \00000a Loading user interface . . . \00000a Executing startup procedures . . . \00000a Initializing database connections . . . \00000a"   }
+}
+
+@keyframes opcty{
+  0% { opacity:0 }
+  100% { opacity:1 }
+}
+
+@keyframes counting{
+    0% { --num: 0 }
+    60% { --num: 66 }
+    100% { --num: 100 }
+}
+
+@keyframes charging {
+  0%{ width:0% }
+  60%{ width:66% }
+  100%{ width:100% }
+}
+
+@keyframes rotate{
+  0%{
+    transform: rotate(0)
+  }
+  100%{
+    transform: rotate(360deg)
+  }
+}
+.flex{
+  display:flex;
+}
+
+body{
+  background-color: #000;
+  color: white;
+  overflow:hidden;
+  height:100%;
+}
+
+.container{
+  display:flex;
+  height:100vh;
+  flex:1;
+  align-items:center;
+  justify-content:center;
+}
+
+#loader{
+  display:flex;
+  flex-direction:column;
+  width:80%;
+  animation: opcty 1s  ease-in-out;
+    
+  .loading-text{
+    font-family:'Orbitron';
+    letter-spacing:0.3rem;
+  }
+  
+  .therefore{
+    font-size:24px;
+    animation:rotate 1s linear infinite;
+    padding-top:9.5px;
+    height:fit;
+  }
+  .loading-number{
+    counter-reset: num var(--num);
+    margin-left:auto;
+    transition: --num 5s;
+    animation: counting 3s  ease-in-out;
+    font-family:'Orbitron';
+    animation-fill-mode: forwards;
+    
+    &:before{
+    font-family:'Orbitron';
+    content: counter(num);
+    }
+  }
+}
+
+
+#loading-bar-border{
+  display:flex;
+  align-items:center;
+  padding:3px;
+  border-radius:3px;
+  border-top:1px solid rgba(255,255,255,.5);
+  border-bottom:1px solid rgba(255,255,255,.5);
+  width:100%;
+  
+  & .loading-bar{
+    height:.6rem;
+    margin:1px 0px;
+    background:white;
+    animation:charging 3s  ease-in-out;
+    animation-fill-mode: forwards;
+    
+  }
+}
+
+#warning{
+  margin-top:.5rem;
+  font-family:'Orbitron';
+  display:flex;
+  height:1.2rem;
+  
+  .exclamation{
+    width:1rem;
+    display:flex;
+    justify-content:center;
+    background-color:white;
+    color:black;
+    border-radius:3px;
+  }
+}
+
+
+#line-cascates{
+  margin-left:auto;
+  display:flex;
+  align-items:end;
+  margin-top:5rem;
+  &:after{
+    height:5rem;
+    font-size:12px;
+    white-space: pre;
+    text-align:end;
+    color:#b5b5b5;
+    content:"";
+    animation: initText 3s ease;
+    animation-fill-mode: forwards;
+  }
+}
+
+
+/* typing */
+
+>>>>>>> 9d9430c (Initial)
