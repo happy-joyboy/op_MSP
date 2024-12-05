@@ -33,11 +33,12 @@
         var delayInMilliseconds = 4000; //
 
 setTimeout(function() {
-  // Get the repository name dynamically
-var repoName = window.location.pathname.split('/')[1]; // Extract repo name from the URL
-
-// Construct the new path
-window.location = `/${repoName}/sites/hq.html`;
+  // Check if the site is being served from GitHub Pages
+var isGitHubPages = window.location.hostname === 'username.github.io';
+// Construct URL dynamically
+var path = isGitHubPages ? '/repository-name/sites/hq.html' : '/sites/hq.html';
+// Redirect accordingly
+window.location.href = path;
 }, delayInMilliseconds);
     </script>
 </body>
