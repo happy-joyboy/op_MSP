@@ -70,6 +70,7 @@
     left: -.15em;
 }
 
+.fg-red { --fg: var(--red); color: var(--red) !important; }
 .glitch {
   animation: glitch 5s step-end infinite alternate, glitch-skew 5s step-end infinite alternate;
 }
@@ -268,6 +269,7 @@ scroller {
   width: calc(100% - 28px);
   padding-right: 35px;
   overflow: hidden;
+  overflow-y: auto;
   color: #d10047;
 }
 content {
@@ -280,6 +282,7 @@ content {
   padding-left: 20px;
   padding-right: 25px;
   overflow-y: scroll;
+  overflow-x: hidden;
   word-wrap: break-word;
 }
 scrollbar {
@@ -307,12 +310,6 @@ scrollbar::after {
   border-top: 10px solid #d10047;
   border-right: 10px solid transparent;
   z-index: 2;
-}
-.logo {
-  resize: horizontal;
-  overflow: hidden;
-  width: 100%;
-  height: auto;
 }
 
 .buttons,
@@ -362,43 +359,9 @@ button {
   background: #f5417d;
 }
 
-.message-menu {
-  width: 40%;
-  height: 100%;
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  border-right: 1px #00ffff;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.message-menu li {
-  float: left;
-  margin: 1px;
-  padding: 0.5em 1em;
-  text-align: center;
-}
-
-.message-menu li a {
-  text-align: center;
-  display: block;
-  text-decoration: none;
-  padding: 0 3em;
-  color: #00ffff;
-}
-
-.message-main {
-  width: 100%;
-  color: white;
-  margin-left: 1;
-  margin-top: 2em;
-}
-
 /* --- BUTTON --- */
 button {
-  margin: 40px;
+  margin: 2rem;
 }
 button,
 button::after {
@@ -503,3 +466,8 @@ button:hover::after {
   text-align: center;
 }
 
+@media  (max-width: 500px){
+  button{
+    margin: 1rem auto;
+  }
+}

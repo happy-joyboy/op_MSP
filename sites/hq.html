@@ -5,6 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+      @media screen and (max-width:500) {
+        body{
+          overflow-y: auto;
+        }
+        #logo{
+          font-size: 2rem;
+        }
+        #buttons{
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+      }
+    </style>
     <title>Document</title>
 </head>
 <body>
@@ -15,26 +32,28 @@
         <scroller id="scroller">
           
         <div class="texttype" id="b" >
-          <p class="message-box" id="typing"></p>
+          <p class="message-box" id="typing" ></p>
         </div>
-        <span class="cyberpunk-font-og glitch" id="logo" style="display:none;">
+        <span class="cyberpunk-font-og glitch" id="logo"  style="display:none;">
           <p>
-              <span class="c glitch" style="font-size: 7rem;">MSP</span><br>
-              <span class="c" style="font-size: 5rem;">c</span>yber Committee
+              <span class="c glitch " style="font-size: 7rem;">MSP</span><br>
+              <span class="c fg-red" style="font-size: 5rem;">c</span><span class="fg-red">yber</span><span> Committee</span>
           </p>
       </span>
       
       <!-- style="display:none;" -->
           <content id="main" style="display:none;">
-            <div id="buttons" style="text-align: center;">
-              <button id="Home"><a href="https://msp-2024-2025.vercel.app/index.html">Home</a></button>
-              <button id="terminal"><a href="../labs/login.html">Login</a></button>
+            <div id="buttons" style="text-align: center;" >
               <button id="explore"><a href="../sites/about.html">About</a></button>
+              <button id="terminal"><a href="../labs/login.html">Login</a></button>
+              <button id="Home"><a href="https://msp-2024-2025.vercel.app/index.html">Home</a></button>
+
             </div>
+            
           </content>
         </scroller>
       </wrapper>
-      <!-- <scrollbar></scrollbar> -->
+      <scrollbar></scrollbar>
     </div>  
   </main>
 

@@ -81,13 +81,9 @@ body{
     animation: words 20s infinite;
 }
 
-.typing-text2 span::before {
-    content: "";
-    color: var(--cool);
-    animation: words2 20s infinite;
-}
 
-.typing-text span::after, .typing-text2 span::after {
+
+.typing-text span::after{
     content: '';
     background-color: var(--bg_black);
     position: absolute;
@@ -105,16 +101,18 @@ body{
 }
 
 @keyframes words {
-    0%, 100% {
+    0%, 50% {
         content: "CYber Committee";
+    }
+    51%,100%{
+        content: "NJmpc Nzxxteepp";
     }
 }
 
-@keyframes words2 {
+/* @keyframes words2 {
     0%, 100% {
         content: "Welcome Back N....";
-    }
-}
+    } */
 
 @keyframes typing {
     10%, 15%, 
@@ -192,4 +190,11 @@ body{
     background-color: var(--blue);
     color: var(--bg_black);
     box-shadow: 0  0 25px var(--blue);
+}
+
+@media(max-width:500px){
+    .contact .heading{
+        font-size: 3rem;
+        margin: 0px;
+    }
 }
