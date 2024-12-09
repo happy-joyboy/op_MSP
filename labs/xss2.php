@@ -39,29 +39,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['reset'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles22.css">
     <title>Stored XSS and SQL Injection Demo</title>
+    <style>
+        .divider{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .test{
+            margin: 2rem;
+            width: auto;
+        }
+    </style>
 </head>
 <body>
 <h1>Leave a Comment</h1>
     <div class="contact" id="contact">
-    <form action="xss2.php" method="POST">
-        <div class="input-box">
-            <label for="username">Name:</label>
-            <input type="text"  name="username" required><br><br>
+        <form action="xss2.php" method="POST">
+            <div class="input-box">
+                <label for="username">Name:</label>
+                <input type="text"  name="username" required><br><br>
+            </div>
+            <label for="comment">Comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
+            
+            <input type="submit" value="Submit Comment" class="btn">
+        </form>
+    </div>
+    <div class="divider">
+            <!-- Reset Button to Clear the Database -->
+            <form action="xss2.php" method="POST" class="test">
+                <input type="submit" name="reset" value="Reset Comments" class="btn">
+            </form>
+            <div class="next test">
+                <a href="xss3.html" class="btn"> Next Challenge</a>
+            </div>
         </div>
-        <label for="comment">Comment:</label><br>
-        <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
-        
-        <input type="submit" value="Submit Comment" class="btn">
-    </form>
-
-    <!-- Reset Button to Clear the Database -->
-    <form action="xss2.php" method="POST">
-        <input type="submit" name="reset" value="Reset Comments" class="btn">
-    </form>
-    </div>
-    <div class="next">
-        <a href="xss3.html" class="btn"> Next Challenge</a>
-    </div>
+    
     <h2>Recent Comments:</h2>
     <div class="reflection">
         <?php
