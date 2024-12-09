@@ -34,18 +34,20 @@
         <div class="texttype" id="b" >
           <p class="message-box" id="typing" ></p>
         </div>
-        <span class="cyberpunk-font-og glitch" id="logo"  style="display:none;">
-          <p>
-              <span class="c glitch " style="font-size: 7rem;">MSP</span><br>
-              <span class="c fg-red" style="font-size: 5rem;">c</span><span class="fg-red">yber</span><span> Committee</span>
-          </p>
-      </span>
+        
       
       <!-- style="display:none;" -->
           <content id="main" style="display:none;">
+            <span class="cyberpunk-font-og glitch" id="logo"  style="display:none;">
+              <p>
+                  <span class="c glitch " style="font-size: 7rem;">MSP</span><br>
+                  <span class="c fg-red" style="font-size: 5rem;">c</span><span class="fg-red">yber</span><span> Committee</span>
+              </p>
+          </span>
+
             <div id="buttons" style="text-align: center;" >
               <button id="explore"><a href="../sites/about.html">About</a></button>
-              <button id="terminal"><a href="../labs/login.html">Login</a></button>
+              <button id="terminal"><a href="../labs/login.php">Login</a></button>
               <button id="Home"><a href="https://msp-2024-2025.vercel.app/index.html">Home</a></button>
 
             </div>
@@ -65,16 +67,18 @@ var speed = 50;
 var speed2 = 200;
 const topsecret = [
   'S : Welcome Back N....\n',
-  'S : Hope you got better ',
-  'T : You still worry too much',
-  'S : Right...Your mission if you choose to accept is waiting',
-  'T : Wakatta',
-  'S : Giving you access now ',
-  'S : And T ... take care',
-  'T : ...',
-  'S : Sorry',
-  '################################'
+  // 'S : Hope you got better ',
+  // 'T : You still worry too much',
+  // 'S : Right...Your mission if you choose to accept is waiting',
+  // 'T : Wakatta',
+  // 'S : Giving you access now ',
+  // 'S : And T ... take care',
+  // 'T : ...',
+  // 'S : Sorry',
+  '',
+  'Loading   ################################'
 ];
+
 
 function typing() {
   if (i < topsecret[x].length) {

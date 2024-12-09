@@ -1,34 +1,34 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles22.css">
+    <link rel="stylesheet" href="/styles/styles22.css">
     <title>Document</title>
+    <style>
+        body{
+            font-size: 40px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        span{
+            color: goldenrod;
+        }
+        .next{
+            margin-bottom: 50px;
+        }
+    </style>
 </head>
 <body>
-    Dashboard for
+    <div class="next">
+        <a href="dashboard.php" class="btn"> Dashboard</a>
+    </div>
+    <span>Dashboard for</span>
 <script>
-   var pos=document.URL.indexOf("context=")+8;
-   document.write(decodeURIComponent(document.URL.substring(pos)));
+//    dont forget your question mark ;>
+//    var pos=document.URL.indexOf("context=")+8;
+    var pos=document.URL.indexOf("xss")+10;
+    document.write(decodeURIComponent(document.URL.substring(pos)));
 </script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles22.css">
-    <title>Document</title>
-</head>
-<body>
-    Dashboard for
-<script>
-   var pos=document.URL.indexOf("context=")+8;
-   document.write(decodeURIComponent(document.URL.substring(pos)));
-</script>
-</body>
->>>>>>> 9d9430c (Initial)
 </html>
