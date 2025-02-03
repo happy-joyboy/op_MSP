@@ -42,7 +42,7 @@
 </head>
 <body>
     <header>
-        <img src="../assets/Picture1.jpg" alt="msp" id="logo">
+        <img src="../assets/images/Picture1.jpg" alt="msp" id="logo">
     </header>
     <div class="contact" id="contact">
         <h2 class="heading">Welcome to Msp</h2>

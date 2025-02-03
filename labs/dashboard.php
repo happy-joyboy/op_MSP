@@ -13,7 +13,6 @@ if (!isset($_SESSION['loggedInStatus'])) {
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="../css/dashboard.css">
     <link href=
 "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href=
@@ -49,8 +48,21 @@ if (!isset($_SESSION['loggedInStatus'])) {
     </nav>
 
     <div>
-        <h2 class="p-4 mt-5">Welcome To Dashboard</h2>
+        <h2 class="p-2 mt-5">Welcome To Dashboard</h2>
     </div>
+
+    <h2 class="p-3 mt-2"> DEMO </h2>
+
+    <div>
+        <ul>
+            <li><a href="form.html">xss1</a></li>
+            <li><a href="xss2.php">xss2</a></li>
+            <li><a href="xss3.html">xss3    </a></li>
+        </ul>
+    </div>
+
+    <h2 class="p-3 mt-2"> practical </h2>
+
     <div>
         <ul>
             <li><a href="form.html">xss1</a></li>

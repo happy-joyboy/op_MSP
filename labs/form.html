@@ -29,15 +29,9 @@
             <p>Phone: <span id="user-phone"></span></p>
         </div>
         <script>
-            // Simulate reflecting GET parameters on the page (this simulates how user input is reflected in a response)
             const urlParams = new URLSearchParams(window.location.search);
             
-            //     let regex = /<[A-Za-z]>/i;
 
-            // if(phone && regex.test(phone)){
-            //     console.log("tests");
-            // }
-            // Example of unsafe reflection without sanitization
             document.getElementById("user-name").innerHTML = urlParams.get("name") || "N/A";
             document.getElementById("user-email").innerHTML = urlParams.get("email") || "N/A";
             document.getElementById("user-phone").innerHTML = urlParams.get("phone") || "N/A";
