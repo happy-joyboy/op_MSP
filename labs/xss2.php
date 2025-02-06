@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['comment'])) {
     $username = $_POST['username'];
     $comment = $_POST['comment'];
 
-    // Vulnerable SQL query (no prepared statement, direct insertion of user input)
+    // Vulnerable SQL query (direct insertion of user input)
     $stmt = "INSERT INTO comments (username, comment) VALUES ('$username', '$comment')";
 
     if (mysqli_query($connXss, $stmt)) {
@@ -99,6 +99,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['reset'])) {
     ?>
 </body>
 </html>
-
-
-<!-- https://www.freecodecamp.org/news/how-to-submit-a-form-with-javascript/ -->

@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles22.css">
-    <title>Login</title>
+    <title>Find id</title>
     <style>
         p {
             font-size: 30px;
@@ -42,7 +42,7 @@
     if (isset($_POST['login'])) {
         $user = $_POST['username'];
 
-        // Vulnerable SQL query (prone to SQL injection)
+        // Vulnerable SQL query 
         $sql = "SELECT id FROM userdata WHERE username='$user'";
 
         // Execute the query

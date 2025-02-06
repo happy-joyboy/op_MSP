@@ -58,6 +58,7 @@ if (!isset($_SESSION['loggedInStatus'])) {
             <li><a href="form.html">xss1</a></li>
             <li><a href="xss2.php">xss2</a></li>
             <li><a href="xss3.html">xss3    </a></li>
+            <li><a href="query_DB.php">SQLI</a></li>
         </ul>
     </div>
 
